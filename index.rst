@@ -20,6 +20,13 @@ Quickstart
 
 Quickly setup a working environment to test `Elcodi` bundles
 
+.. toctree::
+   :hidden:
+
+   quickstart/index
+
+.. include:: /quickstart/map.rst.inc
+
 The Developer Guide
 -------------------
 
@@ -35,7 +42,7 @@ Dive into the developer documentation to see how things work
 The Recipes
 -----------
 
-Common problems found in the real world and their solution
+Common problems found in the real world and their solutions
 
 .. toctree::
    :hidden:
