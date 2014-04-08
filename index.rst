@@ -70,5 +70,5 @@ A guide to contribute to Elcodi.
 .. include:: /contributing/map.rst.inc
 
 .. _Elcodi: http://elcodi.io
-.. _`Symfony Framework`: http://symfony.com
+.. _`Symfony2 Framework`: http://symfony.com
 .. _`Quick Tour`: http://symfony.com/doc/current/quick_tour
