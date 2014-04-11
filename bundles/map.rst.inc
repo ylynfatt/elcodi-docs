@@ -1,9 +1,9 @@
-* :doc:`BannerBundle </bundles/BannerBundle/index>`
-* :doc:`CartBundle </bundles/CartBundle/index>`
-* :doc:`CartCouponBundle </bundles/CartCouponBundle/index>`
-* :doc:`CoreBundle </bundles/CoreBundle/index>`
-* :doc:`CouponBundle </bundles/CouponBundle/index>`
-* :doc:`CurrencyBundle </bundles/CurrencyBundle/index>`
-* :doc:`ProductBundle </bundles/ProductBundle/index>`
-* :doc:`ReferralProgramBundle </bundles/ReferralProgramBundle/index>`
-* :doc:`UserBundle </bundles/UserBundle/index>`
+* :doc:`/bundles/BannerBundle/index`
+* :doc:`/bundles/CartBundle/index`
+* :doc:`/bundles/CartCouponBundle/index`
+* :doc:`/bundles/CoreBundle/index`
+* :doc:`/bundles/CouponBundle/index`
+* :doc:`/bundles/CurrencyBundle/index`
+* :doc:`/bundles/ProductBundle/index`
+* :doc:`/bundles/ReferralProgramBundle/index`
+* :doc:`/bundles/UserBundle/index`

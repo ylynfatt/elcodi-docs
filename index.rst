@@ -49,7 +49,7 @@ Common problems found in the real world and their solutions
 
    recipes/index
 
-.. include:: /cookbook/map.rst.inc
+.. include:: /recipes/map.rst.inc
 
 Bundles
 -------
@@ -58,8 +58,7 @@ Documentation of all Elcodi bundles.
 
 .. toctree::
    :hidden:
-
-   bundles/introduction
+   
    bundles/index
 
 .. include:: /bundles/map.rst.inc

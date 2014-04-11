@@ -10,3 +10,4 @@ CartCouponBundle adds coupon capability and  behaviour to CartBundle.
    installation   
    cartcoupon
    configuration
+   services

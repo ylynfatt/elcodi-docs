@@ -7,4 +7,5 @@ Developer guide
    introduction   
    bundle_structure   
    model
+   events
    extensions
