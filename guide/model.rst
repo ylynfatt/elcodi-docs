@@ -19,3 +19,8 @@ Base model hierarchy
 * ``Interfaces``
 * ``Traits``
 
+.. _entity-override:
+
+Entity override
+---------------
+
