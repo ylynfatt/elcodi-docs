@@ -6,6 +6,12 @@ Structure intro.
 Base structure of a bundle
 --------------------------
 
+.. note::
+
+	Look at :ref:`dependencyinjection` for an overview of the proposed `Extension class`_ at the base of Elcodi bundles.
+
+
+
 * ``Factories``
 * ``Wrappers``
 * ``Resources``
@@ -34,3 +40,5 @@ Base structure of a bundle
 	    abstract public function create();
 	}
 
+
+.. _`Extension class`: http://symfony.com/doc/current/cookbook/bundles/extension.html

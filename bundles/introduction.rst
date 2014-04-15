@@ -5,6 +5,8 @@ Elcodi bundle structure in generally straightforward and complies with Symfony `
 
 There are a few directories worth to taking a look:
 
+.. _dependencyinjection:
+
 DependencyInjection
 -------------------
 
