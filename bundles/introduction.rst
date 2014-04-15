@@ -3,7 +3,7 @@ Introduction
 
 Elcodi bundle structure in generally straightforward and complies with Symfony `best practices`_.
 
-There are a few directories worth to taking a look:
+You might want to read the section :doc:`/guide/bundle_structure` for a brief overview.
 
 .. _dependencyinjection:
 
