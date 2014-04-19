@@ -3,20 +3,42 @@ import sys, os
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
+
+# -- General configuration -----------------------------------------------------
+
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sensio.sphinx.configurationblock']
 source_suffix = '.rst'
 master_doc = 'index'
 project = 'Elcodi'
 copyright = u'2014, Elcodi.com'
-version = ''
-release = ''
+version = '0.1.0'
+release = '0.1.0'
 exclude_patterns = []
+
+# -- Options for HTML output ---------------------------------------------------
+
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+html_title = "Elcodi documentation"
+html_short_title = "Elcodi"
+
+# Guzzle theme options (see theme.conf for more information)
+html_theme_options = {
+    "project_nav_name": "Elcodi",
+    "github_user": "elcodi",
+    "github_repo": "elcodi",
+    "disqus_comments_shortname": "Elcodi",
+}
+
+
 html_theme = 'default'
 htmlhelp_basename = 'Elcodidoc'
 man_pages = [
     ('index', 'elcodi', u'Elcodi Documentation',
      [u'Elcodi.com'], 1)
 ]
+
+
 sys.path.append(os.path.abspath('_exts'))
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
