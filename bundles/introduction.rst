@@ -25,8 +25,8 @@ A typical extension class, such as `ElcodiCartExtension`_, will override these m
 Let's stick with ``ElcodiCartExtension`` and look at the code (for the sake of readability some methods were removed):
 
 .. code-block:: php
-		
-	
+        
+    
 
     /**
      * Config files to load
@@ -95,13 +95,17 @@ The configuration file directory can be specified by returning it, as a ``string
             'Elcodi\CartBundle\Entity\Interfaces\OrderLineHistoryInterface' => 'elcodi.core.cart.entity.order_line_history.class',
         ];
     }
-	
+    
 
 ``getEntitiesOverrides`` maps a class, usually an ``Interface`` to a container parameter who represent another class. This is used for configuring the ``ResolveTargetEntityListener`` doctrine listener and can be used to `override doctrine relationships`_.
 
 
 Events
 ------
+
+Generally each bundle defines a sets of ``events`` that will be emitted when certain conditions occur. 
+
+As you know, the `Symfony Event Dispatcher`_ uses the :method:`Symfony\\Component\\EventDispatcher\\EventDispatcher::dispatch` method to notify observers for a given event. The parameters for this method are the event __name__ and the :class:`Symfony\\Component\\EventDispatcher\\Event` instance.
 
 Factory
 -------
@@ -117,3 +121,4 @@ Using individual bundles
 .. _`best practices`: http://symfony.com/doc/current/cookbook/bundles/best_practices.html
 .. _`ElcodiCartExtension`: https://github.com/elcodi/elcodi/blob/master/src/Elcodi/CartBundle/DependencyInjection/ElcodiCartExtension.php
 .. _`override doctrine relationships`: http://symfony.com/doc/current/cookbook/doctrine/resolve_target_entity.html
+.. _`Symfony Event Dispatcher`: http://symfony.com/doc/current/components/event_dispatcher/introduction.html
