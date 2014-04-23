@@ -45,7 +45,7 @@ Let's stick with ``ElcodiCartExtension`` and look at the code (for the sake of r
 
 ``getConfigFiles`` just returns a list of configuration files. By putting them here, you won't need to manually load them using a ``FileLoader`` in your extension ``load`` method. Currently only ``yml`` files are supported.
 
-The configuration file directory can be specifiwed by returning it, as a ``string``, from the ``getConfigFilesLocation`` method.
+The configuration file directory can be specified by returning it, as a ``string``, from the ``getConfigFilesLocation`` method.
 
 .. code-block:: php
 
@@ -97,7 +97,7 @@ The configuration file directory can be specifiwed by returning it, as a ``strin
     }
     
 
-``getEntitiesOverrides`` maps a class, usually an ``Interface`` to a container parameter who represent another class. This is used for configuring the ``ResolveTargetEntityListener`` doctrine listener and can be used to `override doctrine relationships`_.
+``getEntitiesOverrides`` maps a class, usually an ``Interface`` to a container parameter who represents another class. This is used for configuring the ``ResolveTargetEntityListener`` doctrine listener and can be used to `override doctrine relationships`_.
 
 
 .. _bundle-events:
