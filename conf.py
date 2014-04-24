@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import sys, os
-import guzzle_sphinx_theme
 
 sys.path.append(os.path.abspath('_exts'))
 
@@ -26,8 +25,19 @@ exclude_patterns = []
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
+html_title = "Elcodi documentation"
+html_short_title = "Elcodi"
+htmlhelp_basename = 'Elcodidoc'
+man_pages = [
+    ('index', 'elcodi', u'Elcodi Documentation',
+     [u'Elcodi.com'], 1)
+]
+
+# Guzzle theme https://github.com/guzzle/guzzle_sphinx_theme
+import guzzle_sphinx_theme
+
 # Uses a Guzzle style Pygments theme
-#pygments_style = 'guzzle_sphinx_theme.GuzzleStyle'
+# pygments_style = 'guzzle_sphinx_theme.GuzzleStyle'
 
 # Adds an HTML table visitor to apply Bootstrap table classes
 html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'
@@ -37,15 +47,6 @@ html_theme = 'guzzle_sphinx_theme'
 # Register the theme as an extension to generate a sitemap.xml
 extensions.append("guzzle_sphinx_theme")
 
-html_title = "Elcodi documentation"
-html_short_title = "Elcodi"
-
-htmlhelp_basename = 'Elcodidoc'
-man_pages = [
-    ('index', 'elcodi', u'Elcodi Documentation',
-     [u'Elcodi.com'], 1)
-]
-
 # Guzzle theme options (see theme.conf for more information)
 html_theme_options = {
     "project_nav_name": "Elcodi",
@@ -54,7 +55,14 @@ html_theme_options = {
     "disqus_comments_shortname": "Elcodi",
 }
 
-#templates_path = ['_templates']
+# Custom sidebar templates, maps document names to template names.
+html_sidebars = {
+    '**':       ['localtoc.html', 'searchbox.html']
+}
+
+# templates_path = ['_templates']
+
+# End of Guzzle theme specific config
 
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
