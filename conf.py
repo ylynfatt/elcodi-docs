@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 import sys, os
+
+sys.path.append(os.path.abspath('_exts'))
+
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
-
 # -- General configuration -----------------------------------------------------
 
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sensio.sphinx.configurationblock']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
+    'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig',
+    'sensio.sphinx.refinclude', 'sensio.sphinx.configurationblock', 'sensio.sphinx.phpcode']
+
 source_suffix = '.rst'
 master_doc = 'index'
 project = 'Elcodi'
@@ -21,7 +26,12 @@ exclude_patterns = []
 # "<project> v<release> documentation".
 html_title = "Elcodi documentation"
 html_short_title = "Elcodi"
-
+html_theme = 'default'
+htmlhelp_basename = 'Elcodidoc'
+man_pages = [
+    ('index', 'elcodi', u'Elcodi Documentation',
+     [u'Elcodi.com'], 1)
+]
 # Guzzle theme options (see theme.conf for more information)
 html_theme_options = {
     "project_nav_name": "Elcodi",
@@ -30,17 +40,13 @@ html_theme_options = {
     "disqus_comments_shortname": "Elcodi",
 }
 
-
-html_theme = 'default'
-htmlhelp_basename = 'Elcodidoc'
-man_pages = [
-    ('index', 'elcodi', u'Elcodi Documentation',
-     [u'Elcodi.com'], 1)
-]
-
-
-sys.path.append(os.path.abspath('_exts'))
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
+lexers['php-standalone'] = PhpLexer(startinline=True)
+lexers['php-symfony'] = PhpLexer(startinline=True)
+
 primary_domain = 'php'
+
+# set url for API links
+api_url = 'http://api.symfony.com/master/%s'
 

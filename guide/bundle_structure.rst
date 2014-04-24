@@ -11,7 +11,7 @@ Base structure of a bundle
 	Look at :ref:`dependencyinjection` for an overview of the proposed `Extension class`_ at the base of Elcodi bundles.
 
 
-
+* ``Events``
 * ``Factories``
 * ``Wrappers``
 * ``Resources``
