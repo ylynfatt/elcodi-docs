@@ -52,7 +52,7 @@ html_theme_options = {
     "project_nav_name": "Elcodi",
     "github_user": "elcodi",
     "github_repo": "elcodi",
-    "disqus_comments_shortname": "Elcodi",
+    "disqus_comments_shortname": "elcodi"
 }
 
 # Custom sidebar templates, maps document names to template names.
