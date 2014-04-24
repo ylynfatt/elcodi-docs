@@ -111,7 +111,7 @@ As you know, the `Symfony Event Dispatcher`_ uses the :method:`Symfony\\Componen
 
 In Elcodi bundles, events taxonomy and names are defined as string ``const`` inside a class residing in the bundle root directory. This class has to be named ``ElcodiBundlenameEvents``, so if we are defining event names for the ``CartBundle``, the class name will be `ElcodiCartEvents`_. No big mystery, it just follows Symfony's bundle `naming best practices`_.
 
-Event class definitions are located inside the ``Event`` directory and obviously their implementation varies according to what you want to wrap inside the message passed to the listeners. Sticking with ``CartBundle`` as an implementation reference, it is important to define fine-grained domain events for the objects we are observing: ``Cart`` and ``Order`` shape the innermost part of any transactional commerce application, so we want to know when something change their state, when they are pristine, when they are loaded. 
+Event class definitions are located inside the ``Event`` directory and obviously their implementation varies according to what you want to wrap inside the message passed to the listeners. Sticking with ``CartBundle`` as an implementation reference, it is important to define fine-grained domain events for the objects we are observing: ``Cart`` and ``Order`` shape the innermost part of any transactional commerce application, so we want to know when something changes their state, when they are pristine, when they are loaded.
 
 Thus we see events such as ``CartPreLoadEvent``, ``CartOnLoadEvent``, ``CartPostLoadEvent``, ``OrderOnCreatedEvent`` and so on. Refer to ``CartBundle`` :doc:`documentation </bundles/CartBundle/index>` for more details.
 
