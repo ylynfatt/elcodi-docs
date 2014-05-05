@@ -124,7 +124,7 @@ As a rule of thumb, actions changing states of entities or other domain objects 
 Factory
 -------
 
-Factories allows the creation of entities in a consistent state. Instead of clobbering object constructors with tricky initializations, which can be tedious when composition or aggregation is involved, we just delegate this task to specific services. Factories are passed along services that rely upon having pristine entities injected, they provide another level of abstraction and can help design a loose coupled model. An trivial yet enlighting example can be a doctrine ``Collection`` initialization: no more ``$this->children = new ArrayCollection();`` in your ``__construct()``.
+Factories allows the creation of entities in a consistent state. Instead of clobbering object constructors with tricky initializations, which can be tedious when composition or aggregation is involved, we just delegate this task to specific services. Factories are passed along services that rely upon having pristine entities injected, they provide another level of abstraction and can help design a loose coupled model. An trivial yet enlightening example can be a doctrine ``Collection`` initialization: no more ``$this->children = new ArrayCollection();`` in your ``__construct()``.
 
 Factories reside inside the ``Factory`` directory, located at the root of the bundle. They are defined as Symfony services in the ``factories.yml`` config file inside the ``Resources/config`` directory.
 
