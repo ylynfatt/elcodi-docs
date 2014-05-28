@@ -1,7 +1,7 @@
-.. _contribuiting:
+.. _contributing:
 
-Contribuiting
-=============
+Contributing
+============
 
 .. toctree::
    :maxdepth: 1

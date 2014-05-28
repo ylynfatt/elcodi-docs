@@ -1,7 +1,7 @@
 CoreBundle
 ==========
 
-CoreBundle is the main arbiter for the Elcodi suite. It defines base intrerfaces and abstract classes for entities, services, factories.
+CoreBundle is the main arbiter for the Elcodi suite. It defines base interfaces and abstract classes for entities, services, factories.
 
 .. toctree::
    :maxdepth: 1
