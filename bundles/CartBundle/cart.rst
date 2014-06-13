@@ -192,7 +192,7 @@ Actions triggered by this event
 ###############################
 
 - ``CartEventListener::loadCartPrices``: Given an associated Product, calculates prices for each CartLine as well as parent ``Cart`` grandtotals. **Priority: 16**
-- ``CartEventListener::onCartLoadFlush``: Flushes the ``Cart`` and its associated managed entities to the persistence layer. This is where the ``Cart`` gets physically stored in the BBDD. **Prioridad: 0**
+- ``CartEventListener::onCartLoadFlush``: Flushes the ``Cart`` and its associated managed entities to the persistence layer. This is where the ``Cart`` gets physically stored in the BBDD. **Priority: 0**
 
 Since ``CartEventListener::onCartLoadFlush`` is responsible for physically storing changes, care should be taken when designing custom event listeners subscribing ``cart.onload``: if a listener has to perform changes to the ``Cart`` that need to be made persistent, it is important for this listener to have a **positive** (> 0) priority so that it gets called **before** ``CartEventListener::onCartLoadFlush``. 
 
