@@ -264,7 +264,7 @@ Since ``OrderLineStateEventListener::onOrderLineStateOnChange`` is responsible f
 Order states
 ------------
 
-A default set of states is defined by the bundle configuration. Along with the states definition, a workflow of valid transitions can be configured which tell to which state each of them can be brought. The ``OrderManager::checkOrderLineCanChangeToState()`` method validates state changes.
+A default set of states is defined by the bundle configuration. Along with the states definition, a workflow of valid transitions can be configured which tells to which state each of them can be brought. The ``OrderManager::checkOrderLineCanChangeToState()`` method validates state changes.
 
 The following is the default statuses configuration:
 
