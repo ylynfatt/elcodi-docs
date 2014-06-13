@@ -268,7 +268,8 @@ A default set of states is defined by the bundle configuration. Along with the s
 
 The following is the default statuses configuration:
 
-.. code-block: yaml
+
+.. code-block:: yaml
 
 	order:
         initial_state:        new
@@ -309,5 +310,6 @@ The following is the default statuses configuration:
             pending.payment:     
                 - accepted
                 - cancelled
+
 
 It is quite self-explanatory: keys of the ``yaml`` configuration below the ``states`` level represent the status **name**. Elements in the child array are the valid target states.

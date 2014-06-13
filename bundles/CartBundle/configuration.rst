@@ -4,7 +4,7 @@ Configuration
 Full default configuration
 --------------------------
 
-.. code-block: yaml
+.. code-block:: yaml
 
 	# Default configuration for "ElcodiCartBundle"
 	elcodi_purchase:
