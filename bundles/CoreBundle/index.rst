@@ -5,7 +5,6 @@ CoreBundle is the main arbiter for the Elcodi suite. It defines base interfaces 
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
    installation
    interfaces      

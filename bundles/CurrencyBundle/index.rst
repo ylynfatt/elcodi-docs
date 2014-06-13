@@ -5,7 +5,6 @@ CurrencyBundle manages and stores currencies and their exchange rates. Provides 
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
    installation   
    currency

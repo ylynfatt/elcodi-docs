@@ -1,1 +1,2 @@
-manufacturer.rst
+Manufacturer
+============

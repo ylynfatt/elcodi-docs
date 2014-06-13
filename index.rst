@@ -39,18 +39,6 @@ Quickly setup a working environment to test `Elcodi` bundles
 
 .. include:: /quickstart/map.rst.inc
 
-The Developer Guide
--------------------
-
-Dive into the developer documentation to see how things work
-
-.. toctree::
-   :hidden:
-
-   guide/index
-
-.. include:: /guide/map.rst.inc
-
 Bundles
 -------
 

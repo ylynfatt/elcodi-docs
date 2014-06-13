@@ -1,6 +1,9 @@
 Bundles
 =======
 
+List of Elcodi core bundles
+---------------------------
+
 .. toctree::
    :hidden:
 
