@@ -1,6 +1,8 @@
 Services
 ========
 
+.. _cartbundle-services-cartmanager:
+
 CartManager
 -----------
 
@@ -153,8 +155,80 @@ Given a CartLineInterface object and a positive integer **n**, the item quantity
 
 If the value of **n** is less than 1, the CartLine will be removed and a ``cart_line.onremove`` event will be fired. If its value is equal or greater than 1 a ``cart_line.onedit`` event will be emitted. On both cases the ``cart.preload`` and ``cart.onload`` events will be fired, in the shown order.
 
+.. _cartbundle-services-addpurchasable:
+
+->addPurchasable()
+------------------
+
+``CartManager::addPurchasable(CartInterface $cart, PurchasableInterface $purchasable, $quantity)``
+
+Given a ``CartInterface`` object, a ``PurchasableInterface`` object and a positive integer **n**, if the ``Purchasable`` has not yet been added to the ``Cart`` a new ``CartLine`` is created, holding a reference to the ``Purchasable`` object and an item quantity value of **n** will be set. If the ``Purchasable`` was already present in the ``Cart``, the item quantity value will be increased by **n**.
+
+If the value of **n** is less than 1, no action will be performed on the ``Cart`` or ``CartLine``.
+
+.. note ::
+
+    Refer to the :ref:`ProductBundle documentation <productbundle-product-product-and-variant>` to clarify the meanings of ``Purchasable``, ``Product`` and ``Variant``
+
+When a ``Purchasable`` is added to the ``Cart`` using ``addPurchasable()``, different actions occur internally.
+
+If the ``Purchasable`` is a ``ProductInterface`` object,
+
+* Current ``Cart::cartItems`` are iterated over and the ``Product`` being added is compared with current ``CartLine::product``
+* If they match, ``CartLine::quantity`` is incresed correspondingly depending on ``$quantity``.
+* if they do *NOT* match, a new ``CartLine`` is factored, ``CartLine::product`` is assigned the passed object and quantity is set correspondingly depending on ``$quantity``.
+
+If the ``Purchasable`` is a ``VariantInterface`` object,
+
+* Current ``Cart::cartItems`` are iterated over and the ``Variant`` being added is compared with current ``CartLine::variant``
+* If they match, ``CartLine::quantity`` is incresed correspondingly depending on ``$quantity``.
+* if they do *NOT* match, a new ``CartLine`` is factored, ``CartLine::variant`` is assigned the passed object, ``CartLine::product`` is set to ``$purchasable->getProduct()`` and quantity is set correspondingly depending on ``$quantity``.
+
+Example with ``Product``:
+
+.. code-block:: php
+
+    use Elcodi\CartBundle\Entity\Cart;
+    use Elcodi\ProductBundle\Entity\Product;
+
+    $cart = new Cart;
+    $product = new Product();
+    $quantity = 10;
+    $cartManager->addPurchasable(
+        $cart,
+        $product,
+        $quantity
+    );
+
+Example with ``Variant``:
+
+.. code-block:: php
+
+    use Elcodi\CartBundle\Entity\Cart;
+    use Elcodi\ProductBundle\Entity\Product;
+    use Elcodi\ProductBundle\Entity\Variant;
+
+    $cart = new Cart;
+    $product = new Product();
+    $variant = new Variant();
+    $variant->setProduct($product);
+    $quantity = 10;
+    $cartManager->addPurchasable(
+        $cart,
+        $variant,
+        $quantity
+    );
+
+
+If the ``Purchasable`` was already present in the ``Cart``, a ``cart_line.onedit`` event will be fired, referencing the CartLine associated with the Product. Conversely, a `cart_line.onadd` event will be emitted. On both cases, the ``cart.preload`` and ``cart.onload`` events will be fired in the described order.
+
 ->addProduct()
 --------------
+
+.. note ::
+
+    This method is deprecated. See :ref:`CartManager::addPurchasable() <cartbundle-services-addpurchasable>`
+
 
 Given a CartInterface object, a ProductInterface object and a positive integer **n**, if the Product has not yet been added to the ``Cart`` a new CartLine is created, holding a reference to the Product object and an item quantity value of **n** will be set. If the Product was already present in the ``Cart``, the item quantity value will be increased by **n**.
 

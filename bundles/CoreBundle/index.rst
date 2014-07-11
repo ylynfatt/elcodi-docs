@@ -32,9 +32,9 @@ Abstract classes should reside in the ``Entity/Abstracts`` directory of each bun
 Traits
 ~~~~~~
 
-Traits should reside in the ``Entity/Traits`` directory of each bundle. They have corresponding :ref:`interfaces <core-bundle-interfaces>`. Every time a trait is added, it should be mirrored by an interface.
+Traits should reside in the ``Entity/Traits`` directory of each bundle. They have corresponding :ref:`interfaces <corebundle-index-interfaces>`. Every time a trait is added, it should be mirrored by an interface.
 
-.. _core-bundle-interfaces:
+.. _corebundle-index-interfaces:
 
 Interfaces
 ~~~~~~~~~~
