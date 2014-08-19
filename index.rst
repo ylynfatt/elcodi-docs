@@ -14,7 +14,7 @@ Hello World!
 
 It aims to promote `SOLID`_ principles, efficient `code reutilization`_, `separation of concerns`_ as effective building blocks for the development of e-commerce applications or components with the `Symfony PHP Framework`_
 
-Rather than provide a single, monolithic application, the codebase is splitted in `various projects`_, each with its own subtree-splitted repositories, so that dependencies can be controlled and fine-tuned by the enveloping Symfony application utilizing Elcodi components.
+Rather than provide a single, monolithic application, the codebase is split into `various projects`_, each with its own repository, so that dependencies can be controlled and fine-tuned by the enveloping Symfony application utilizing Elcodi components.
 
 Elcodi is now in an early development stage and provides a reference implementation for the basic :doc:`core components <bundles/index>` found in e-commerce web projects.
 
